@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
 });
 
 
-//Dane said: Post is a little different from get. We'll need to add to the db, use fs to rewrite the db.
+//Dane said: Post is a little different from get. We'll need to add to the db, use fs to rewrite the
 router.post('/notes', (req, res) => {
   res.json(db);
 });
