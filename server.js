@@ -8,7 +8,7 @@ const path = require('path');
 const routes = require('./routes');
 
 //Here, we let our app know that it will be receiving all 'process'ing activity either through the Heroku 'env'ironment (for this app), or through our local 'port' '3001'.
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 //Here, we initialize 'express' (which we're defining as 'app') so that we can enable our routes and let our files exchange information.
 const app = express();
