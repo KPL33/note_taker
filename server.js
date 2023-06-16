@@ -15,6 +15,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('./public'))
 
 //Here, we declare that all of our 'static' files will come from our 'public' folder (javascript, html, css etc.).
 app.use(express.static('public'));
