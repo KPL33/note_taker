@@ -90,8 +90,10 @@ const handleNoteDelete = (e) => {
   }
 
   deleteNote(noteId).then(() => {
-    getAndRenderNotes();
-    renderActiveNote();
+    note.parentElement.remove();
+  })
+  .catch((error) => {
+    console.error('Failed to delete note:', error);
   });
 };
 
@@ -168,6 +170,15 @@ const renderNoteList = async (notes) => {
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
+
+  const existingNotes = noteList[0].querySelectorAll('.list-group-item');
+  existingNotes.forEach((note) => {
+    const noteId = JSON.parse(note.dataset.note).id;
+    const matchingNote = jsonNotes.find((note) => note.id === noteId);
+    if (!matchingNote) {
+      note.remove();
+    }
+  });
 };
 
 // Gets notes from the db and renders them to the sidebar
