@@ -9,11 +9,17 @@
 • √ deploy the entire application to Heroku.
 • √ be able to write and save notes
 • √ When open the Note Taker, presented with landing page with a link to a notes page.
-• On-click the link to the notes page, presented with page with existing notes listed in left-hand column, plus empty fields to enter a new note title note text in right-hand column.
-• WHEN new note title, note text entered, a Save icon appears in the navigation at the top of the page.
-• Clicking Save icon, new note entered is saved, appears in left-hand column with the other existing notes
-• Click on existing note in list in left-hand column, that note appears in the right-hand column.
-• Click on the Write icon in the navigation at the top of the page, presented empty fields to enter new note title note in right-hand column
+• √ On-click the link to the notes page, presented with page with existing notes listed in left-hand column, plus empty fields to enter a new note title note text in right-hand column.
+• √ WHEN new note title, note text entered, a Save icon appears in the navigation at the top of the page.
+• √ Clicking Save icon, new note entered is saved, appears in left-hand column with the other existing notes
+• √ Click on existing note in list in left-hand column, that note appears in the right-hand column.
+• √ Click on the Write icon in the navigation at the top of the page, presented empty fields to enter new note title note in right-hand column
+
+Add notes too...
+√ htmlroutes
+apiroutes
+(my) index
+(their) index
 
 
 ## Mock-Up

@@ -1,3 +1,5 @@
+// And from there, 'server.js' is importing 'index.js', which will include both 'api' and 'html' 'routes' files.
+
 //Here, we establish a 'router', which will serve to bundle the 'req'uest and 'res'ponse paths to be utilized in our 'server.js' file.
 const router = require('express').Router();
 const htmlroutes = require('./htmlroutes');
