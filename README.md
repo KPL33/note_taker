@@ -32,7 +32,7 @@ This simple Application allows users to create, save, edit and delete notes, wit
 </br>
 
 ## Live Application Link
-https://peaceful-garden-49558-8cba14d0f28d.herokuapp.com/notes
+https://peaceful-garden-49558-8cba14d0f28d.herokuapp.com/
 
 </br>
 
