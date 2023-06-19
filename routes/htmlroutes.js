@@ -3,7 +3,7 @@
 //Here, the built-in (to NodeJS) 'path' module is providing utilities for our app to work with the 'htmlroutes' file. It essentialy allows the file which is importing 'htmlroutes' ('index.js') to find this file, along with 'apiroutes, which is utilizing the same 'paths' module. And from there, 'server.js' is importing 'index.js', which will include both 'api' and 'html' 'routes' files.
 const path = require('path');
 
-//As is the case in 'apiroutes.js', here we use the built-in 'express' 'Router' method, which helps to bundle the 'req'uest and 'res'ponse paths that are being utilized by our 'server.js' file. We assign it to the 'const' 'router'.
+//As is the case in 'apiroutes.js' and 'index.js', here we use the built-in 'express' 'Router' method, which helps to bundle the 'req'uest and 'res'ponse paths that are being utilized by our 'server.js' file. We assign this method to the 'const' 'router'.
 const router = require('express').Router();
 
 //Here, we are instructing that if we receive a 'req'uest for the 'notes' 'html' page (which occurs when theuser clicks the 'Get Started' button on our home/'index.html' page), our 'router' (which we're 'export'ing, below) will load ('send' or 'res'pond with) that page to the user, by supplying the 'path' to it.

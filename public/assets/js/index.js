@@ -79,7 +79,7 @@ const handleNoteSave = () => {
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
-  // Prevents the click listener for the list from being called when the button inside of it is clicked
+  // Prevents the click listener for the list from being called when the button inside of it is clicked. This allows us to assign separate actions, depending on which area of the box containing both the previous note and that note's 'delete/trashcan' icon appear, which is important because one action (clicking the note itself) populates that note back into the area on the right, while the other ('delete/trashcan' icon) deletes the note.
   e.stopPropagation();
 
   const note = e.target;
@@ -89,6 +89,7 @@ const handleNoteDelete = (e) => {
     activeNote = {};
   }
 
+  //Here, we have added the 'remove' method to the 'parentElement' in which the 'note' appears, and a message that can log, should an error occur in this process.
   deleteNote(noteId).then(() => {
     note.parentElement.remove();
   })
@@ -171,10 +172,14 @@ const renderNoteList = async (notes) => {
     noteListItems.forEach((note) => noteList[0].append(note));
   }
 
+  //Here, we 'Select' 'All' 'existingNotes' (in our sidebar, on the right side of the app), beginning with the first item in the array of information stored there (in our 'db.json' file). 
   const existingNotes = noteList[0].querySelectorAll('.list-group-item');
+  //We then iterate over the 'Id's of each existing note in the 'dataset', as we do.
   existingNotes.forEach((note) => {
     const noteId = JSON.parse(note.dataset.note).id;
+    //We then 'find' 'Notes' with 'Id's 'matching' that of the 'Id' that was designated for deletion, when our user clicked the 'trashcan' icon. 
     const matchingNote = jsonNotes.find((note) => note.id === noteId);
+    //This 'if' checks that a 'matchingNote' (based on its 'Id') does NOT ('!') appear in the 'dataset' (array) within our 'db.json' file. If the 'Note' is NOT found, the 'Note' is 'remove'd from our app's page and the user will no longer see it there.
     if (!matchingNote) {
       note.remove();
     }

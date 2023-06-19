@@ -7,7 +7,7 @@ const path = require('path');
 //'fs' gives us all of the built-in utilities of the "file system" ("read", "write", etc.), essentially for our app to run.
 const fs = require('fs');
 
-//As is the case in 'htmlroutes.js', here we use the built-in 'express' 'Router' method, which helps to bundle the 'req'uest and 'res'ponse paths that are being utilized by our 'server.js' file. We assign it to the 'const' 'router'.
+//As is the case in 'htmlroutes.js' and 'index.js', here we use the built-in 'express' 'Router' method, which helps to bundle the 'req'uest and 'res'ponse paths that are being utilized by our 'server.js' file. We assign this method to the 'const' 'router'.
 const router = require('express').Router();
 
 //Utlizing the 'uuid' framework, we can assign unique 'id's to each of the user's new notes as they're received. This info. is stored in the 'db.json' file, within the 'db' folder.
@@ -47,7 +47,7 @@ router.post('/notes', (req, res) => {
 
 });
 
-//Here, we give our app the ability to 'delete' a note, based on the unique 'id' assigned to it when it was entered by the user. The ':' instructs our function that 'id' is a dynamic paramater. We then assign that 'id' to 'noteId' for this and other functions to utilize.
+//Here, we give our app the ability to 'delete' a note, based on the unique 'id' assigned to it when the note was saved by the user. The ':' instructs our function that 'id' is a dynamic paramater. We then assign that 'id' to 'noteId' for this and other functions to utilize.
 router.delete('/notes/:id', (req, res) => {
   const noteId = req.params.id;
 

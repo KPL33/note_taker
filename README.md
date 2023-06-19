@@ -1,39 +1,27 @@
 # 11 Note Taker
 
-## Your Task
+## Overview
+A simple App, that allows users to create, save, edit and delete notes, with content and titles of their choosing.
 
-• √ Create Note Taker, used to write & save notes.
-• √ App will use an Express.js back end
-• √ will save and retrieve note data from a JSON file.
-• √ build the back end, connect to front.
-• √ deploy the entire application to Heroku.
-• √ be able to write and save notes
-• √ When open the Note Taker, presented with landing page with a link to a notes page.
-• √ On-click the link to the notes page, presented with page with existing notes listed in left-hand column, plus empty fields to enter a new note title note text in right-hand column.
-• √ WHEN new note title, note text entered, a Save icon appears in the navigation at the top of the page.
-• √ Clicking Save icon, new note entered is saved, appears in left-hand column with the other existing notes
-• √ Click on existing note in list in left-hand column, that note appears in the right-hand column.
-• √ Click on the Write icon in the navigation at the top of the page, presented empty fields to enter new note title note in right-hand column
+## App Instructions
+• To add notes, first click "Get Started" button.
+• On the next screen, enter your note's content and title by clicking the fields on the left.
+• Click the 
 
 Add notes too...
 √ htmlroutes
-apiroutes
-(my) index
-(their) index
+√ apiroutes
+√ (my) index
+√ (their) index
 
 
-## Mock-Up
+## Screen-Caps of the App
 
-The following images show the web application's appearance and functionality:
-
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
-
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
 
 
 ## Getting Started
 
-• On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
+√On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
 
 The following HTML routes should be created:
 
